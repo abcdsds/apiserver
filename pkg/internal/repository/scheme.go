@@ -1,5 +1,7 @@
 package repository
 
+import "fmt"
+
 type XLog struct {
 	ip        string
 	useragent string
@@ -23,4 +25,15 @@ type ActiveService struct {
 	mode    string
 	ipaddr  string
 	elapsed string
+}
+
+type XLogs []XLog
+
+func (receiver XLogs) ConvertedToString() string {
+	var converted string
+	for _, xLog := range receiver {
+		converted += fmt.Sprintf("ip:%s, elapsed:%s, objName:%s", xLog.ip, xLog.elapsed, xLog.objName)
+	}
+
+	return converted
 }

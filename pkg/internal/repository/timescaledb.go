@@ -28,7 +28,7 @@ func (receiver *TimeScaleDB) FindXLogByTxid() *XLog {
 	return nil
 }
 
-func (receiver *TimeScaleDB) FindAll() []XLog {
+func (receiver *TimeScaleDB) FindAll(offset int, limit int) XLogs {
 	return nil
 }
 
