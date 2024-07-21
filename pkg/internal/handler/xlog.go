@@ -51,7 +51,7 @@ func (receiver XLog) GetXLogList(req *restful.Request, resp *restful.Response) e
 	}
 }
 
-func (receiver XLog) GetProfileData(req *restful.Request, resp *restful.Response) error {
+func (receiver XLog) GetProfiles(req *restful.Request, resp *restful.Response) error {
 	req.QueryParameter("a")
 	req.QueryParameter("b")
 	req.QueryParameter("c")
